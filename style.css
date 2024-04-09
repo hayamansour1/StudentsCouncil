@@ -1,0 +1,162 @@
+body {
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(rgba(166, 206, 57, 0.5),rgba(2, 123, 182, 0.7));
+    margin-bottom: 50px;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('Tajawal-Regular.ttf') format('truetype');
+    font-weight: bold;
+}
+
+.animated-title {
+    animation: fadeIn 2s;
+    font-size: 2em;
+    color: #027bb6;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #027bb6;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+#mid-img {
+    height: 50px;
+}
+
+#logo {
+    height: 70px;
+}
+
+a{
+    color: #ffffff;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #027bb6;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#card {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s; 
+}
+
+#card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#name {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Tajawal', sans-serif;
+    color: #027bb6;
+}
+
+input[type=text],button {
+    width: 12.5cm;
+    margin-bottom: 50px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #6c757d;
+    font-family: 'Tajawal', sans-serif;
+}
+
+button {
+    background-color: #007bff;
+    width: 4cm;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Tajawal', sans-serif;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.animated-title {
+    animation: fadeIn 2s;
+}
+
+.animated-card {
+    animation: bounceIn 2s;
+}
+
+.animated-button {
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes bounceIn {
+    0% {transform: scale(0.1); opacity: 0;}
+    60% {transform: scale(1.2); opacity: 1;}
+    100% {transform: scale(1);}
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+/* استجابة التصميم */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.8em; /* تصغير حجم الخطوط على الشاشات الصغيرة */
+    }
+
+    #card {
+        width: 90%; /* جعل البطاقة أوسع على الشاشات الصغيرة */
+    }
+
+    nav {
+        flex-direction: column; /* تغيير التوجيه إلى العمود على الشاشات الصغيرة */
+    }
+
+    #mid-img, #logo {
+        height: 30px; /* تغيير حجم الصور على الشاشات الصغيرة */
+    }
+
+    input[type=text], button {
+        width: 90%; /* جعل الإدخال والزر أوسع على الشاشات الصغيرة */
+        margin: 5px 0; /* تقليل التباعد والهوامش على الشاشات الصغيرة */
+    }
+
+    button {
+        width: auto; /* تجاوز العرض المحدد للزر على الشاشات الصغيرة */
+    }
+}
